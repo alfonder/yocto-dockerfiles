@@ -31,7 +31,7 @@ cp install-buildtools-make.sh $workdir
 cd $workdir
 
 baseimage=`grep FROM Dockerfile | sed -e 's/FROM //'`
-${ENGINE_CMD} pull $baseimage
+${ENGINE_CMD} pull --platform $TARGETPLATFORM $baseimage
 
 ${ENGINE_CMD} build \
        --build-arg TARGETPLATFORM=$TARGETPLATFORM \
