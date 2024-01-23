@@ -39,7 +39,7 @@ jobs:
     env:
       DISTRO_TO_BUILD: ${{ matrix.distro_to_build }}
       TARGETPLATFORM: ${{ matrix.targetplatform }}
-      REPO: crops/yocto
+      REPO: alfonder/yocto
       DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
       DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
       GHCR_USERNAME: ${{ github.actor }}
